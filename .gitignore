@@ -1,3 +1,4 @@
+
 node_modules/
 .env
 .DS_Store
@@ -7,5 +8,7 @@ package-lock.json
 test.js
 analyze-screenshots.js
 Screenshot*.png
+# Ignore all PNGs except those in img/ and those starting with WPF
 *.png
 !WPF*.png
+!img/*.png
