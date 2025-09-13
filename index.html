@@ -13,7 +13,12 @@
     <title>About UWPF - Unified World Pickleball Federation</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        html, body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f6f8fa;
+        }
         .uwpf-logo {
             max-width: 220px;
             margin: 2rem auto 1.5rem auto;
@@ -24,30 +29,77 @@
             --bs-primary-rgb: 99, 102, 241;
         }
         .board-member-card {
-            border: 2px solid #198754;
+            border: 1.5px solid #e0e7ef;
             border-radius: 1rem;
             background: #fff;
-            box-shadow: 0 2px 8px rgba(25,135,84,0.07);
-            padding: 1.5rem 1rem;
-            margin-bottom: 2rem;
+            box-shadow: 0 2px 12px rgba(99,102,241,0.07);
+            padding: 1.2rem 0.7rem 1.1rem 0.7rem;
+            margin-bottom: 1.5rem;
             text-align: center;
-            transition: box-shadow 0.2s;
+            transition: box-shadow 0.2s, transform 0.2s;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: 100%;
         }
-        .board-member-card:hover {
-            box-shadow: 0 6px 24px rgba(25,135,84,0.13);
+        .board-member-card:hover, .board-member-card:focus-within {
+            box-shadow: 0 8px 32px rgba(99,102,241,0.13);
+            transform: translateY(-6px) scale(1.04);
         }
         .board-member-img {
-            width: 90px;
-            height: 90px;
+            width: 64px;
+            height: 64px;
             object-fit: cover;
             border-radius: 50%;
-            border: 3px solid #198754;
-            margin-bottom: 1rem;
+            border: 2px solid #6366f1;
+            margin-bottom: 0.7rem;
+            background: #f3f4f6;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
         .board-member-country {
-            font-size: 1rem;
-            color: #198754;
+            font-size: 0.95rem;
+            color: #6366f1;
             font-weight: 500;
+            margin-top: 0.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4em;
+        }
+        .board-member-card .fw-bold {
+            font-size: 1.08rem;
+            font-weight: 600;
+            margin-bottom: 0.1rem;
+            word-break: break-word;
+            min-height: 2.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .board-member-flag {
+            width: 22px;
+            height: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 3px;
+            border: 1px solid #e0e7ef;
+            margin-right: 0.4em;
+            overflow: hidden;
+            background: #fff;
+        }
+        .board-member-flag img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 2px;
+            border: none;
+            display: block;
         }
         .section-title {
             color: var(--bs-primary);
@@ -107,7 +159,7 @@
         </div>
     </section>
 
-    <div class="container py-5">
+    <div class="container py-5" style="max-width: 950px;">
         <h1 class="text-center section-title">When We Unite, Pickleball Wins</h1>
         <p class="lead text-center mb-4" style="color:#198754;">
             Uniting nations, empowering players, and growing pickleball worldwide.
@@ -158,71 +210,71 @@
         <!-- Meet the Board Section -->
         <h2 class="section-title text-center">Meet the Board</h2>
         <!-- Copresidents Row -->
-        <div class="row justify-content-center mb-4">
-            <div class="col-md-4 col-lg-3">
+        <div class="row justify-content-center mb-4 g-3 align-items-stretch">
+            <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch">
                 <div class="board-member-card">
                     <img src="img/Arvind-Prabhoo.png" alt="Arvind Prabhoo" class="board-member-img">
                     <div class="fw-bold">Arvind Prabhoo</div>
-                    <div class="board-member-country">Past President</div>
+                    <div class="board-member-country"><span class="board-member-flag"><img src="https://flagcdn.com/in.svg" alt="India" style="width:100%;height:auto;"></span>Past President</div>
                 </div>
             </div>
-            <div class="col-md-4 col-lg-3">
+            <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch">
                 <div class="board-member-card">
                     <img src="img/Seymour-Rifkind.png" alt="Seymour Rifkind" class="board-member-img">
                     <div class="fw-bold">Seymour Rifkind</div>
-                    <div class="board-member-country">Past President</div>
+                    <div class="board-member-country"><span class="board-member-flag"><img src="https://flagcdn.com/us.svg" alt="USA" style="width:100%;height:auto;"></span>Past President</div>
                 </div>
             </div>
         </div>
         <!-- Board Members Row -->
-        <div class="row justify-content-center">
-            <div class="col-md-4 col-lg-3">
+        <div class="row justify-content-center g-3 align-items-stretch">
+            <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch">
                 <div class="board-member-card">
                     <img src="img/Rika-Riordan.png" alt="Rika Riordan" class="board-member-img">
                     <div class="fw-bold">Rika Riordan</div>
-                    <div class="board-member-country">Japan</div>
+                    <div class="board-member-country"><span class="board-member-flag"><img src="https://flagcdn.com/jp.svg" alt="Japan" style="width:100%;height:auto;"></span>Japan</div>
                 </div>
             </div>
-            <div class="col-md-4 col-lg-3">
+            <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch">
                 <div class="board-member-card">
                     <img src="img/Miguel-Montano.png" alt="Miguel Montaño Freire" class="board-member-img">
                     <div class="fw-bold">Miguel Montaño Freire</div>
-                    <div class="board-member-country">Spain</div>
+                    <div class="board-member-country"><span class="board-member-flag"><img src="https://flagcdn.com/es.svg" alt="Spain" style="width:100%;height:auto;"></span>Spain</div>
                 </div>
             </div>
-            <div class="col-md-4 col-lg-3">
+            <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch">
                 <div class="board-member-card">
                     <img src="img/Allen-Zeng.png" alt="Allen Zeng" class="board-member-img">
                     <div class="fw-bold">Allen Zeng</div>
-                    <div class="board-member-country">China</div>
+                    <div class="board-member-country"><span class="board-member-flag"><img src="https://flagcdn.com/cn.svg" alt="China" style="width:100%;height:auto;"></span>China</div>
                 </div>
             </div>
-            <div class="col-md-4 col-lg-3">
+            <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch">
                 <div class="board-member-card">
                     <img src="img/Giulia-Soresina.png" alt="Giulia Soresina" class="board-member-img">
                     <div class="fw-bold">Giulia Soresina</div>
-                    <div class="board-member-country">Italy</div>
+                    <div class="board-member-country"><span class="board-member-flag"><img src="https://flagcdn.com/it.svg" alt="Italy" style="width:100%;height:auto;"></span>Italy</div>
                 </div>
             </div>
-            <div class="col-md-4 col-lg-3">
+            <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch">
                 <div class="board-member-card">
                     <img src="img/Jimmy-Tan.png" alt="Jimmy Tan" class="board-member-img">
                     <div class="fw-bold">Jimmy Tan</div>
-                    <div class="board-member-country">Asia</div>
+                    <div class="board-member-country"><span class="board-member-flag"><img src="https://flagcdn.com/sg.svg" alt="Asia" style="width:100%;height:auto;"></span>Asia</div>
                 </div>
             </div>
-            <div class="col-md-4 col-lg-3">
+            <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch">
                 <div class="board-member-card">
                     <img src="img/Kim-Janice-Wagner.png" alt="Kim Janice Wagner" class="board-member-img">
                     <div class="fw-bold">Kim Janice Wagner</div>
-                    <div class="board-member-country">South Africa</div>
+                    <div class="board-member-country"><span class="board-member-flag"><img src="https://flagcdn.com/za.svg" alt="South Africa" style="width:100%;height:auto;"></span>South Africa</div>
                 </div>
             </div>
-            <div class="col-md-4 col-lg-3">
+            <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch">
                 <div class="board-member-card">
                     <img src="img/Kelvin-YiI.png" alt="Kelvin Yii Lee Wuen" class="board-member-img">
                     <div class="fw-bold">Kelvin Yii Lee Wuen</div>
-                    <div class="board-member-country">Malaysia</div>
+                    <div class="board-member-country"><span class="board-member-flag"><img src="https://flagcdn.com/my.svg" alt="Malaysia" style="width:100%;height:auto;"></span>Malaysia</div>
                 </div>
             </div>
         </div>
